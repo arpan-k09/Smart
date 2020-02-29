@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Login Page!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<script>
+
+		function validateForm() 
+			{
+				
+    			var em = document.forms["myForm1"]["username"].value;    
+    			
+   				var pass = document.forms["myForm1"]["pass"].value;  
+    			
+  				
+    			   
+    			if (em == "")                                   
+    			{ 
+        			alert("Email must be filled out"); 
+        			 
+        			return false; 
+    			} 
+   
+    			else if (em.indexOf("@", 0) < 0)                 
+    			{ 
+        			alert("Please enter a valid e-mail address."); 
+        			 
+        			return false; 
+    			} 
+   
+    			else if (em.indexOf(".", 0) < 0)                 
+    			{ 
+        			alert("Please enter a valid e-mail address."); 
+        			
+        			return false; 
+    			} 
+   
+			     
+   				
+
+			    else if (pass == "")                        
+    			{ 
+        			alert("Password must be filled out");
+        			return flase; 
+    			} 
+    			
+   			}
+			
+       	</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Smart Parking</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="signup.html">Register</a>
+						<a href="login.html">Login</a>
+						<a href="after_l.html">Services</a>
+						<a href="c_us.html">Contact Us</a>
+					</nav>
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+					
+
+					<!-- Form -->
+						<section>
+							<h3>Sign in!</h3><hr>
+							<form name="myForm1" method="post" action="php/login1.php" onsubmit="return validateForm()">
+								<div class="row uniform 50%">
+									
+									
+									
+									<div class="12u$">
+										<input type="email" name="username" id="username" value="" placeholder="User Name" />
+									</div>
+									
+								
+
+									<div class="12u$">
+										<input type="Password" name="pass" id="pass" value="" placeholder="Password" />
+									</div>
+
+									
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Login" class="special" /></li>
+											
+										</ul>
+									</div>
+								</div>
+							</form>
+							<hr>
+						</section>
+
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
